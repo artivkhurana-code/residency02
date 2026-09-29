@@ -568,7 +568,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* residents still waiting on a photo: same frame and shape as the prints */
 .polaroid:not(.has-photo) { background: #f5f0eb; padding: 16px 16px 10px; }
-.polaroid:not(.has-photo) .polaroid-photo { aspect-ratio: 4 / 5; }
+.polaroid:not(.has-photo) .polaroid-photo { aspect-ratio: 600 / 730; } /* same shape as the photo prints */
 
 /* residents with a finished polaroid: the print is the card, name and links sit on its frame */
 .polaroid.has-photo {

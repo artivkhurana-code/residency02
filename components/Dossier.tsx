@@ -147,7 +147,7 @@ export default function Dossier({
                 >
                   {r.photo ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={r.photo} alt={r.founder} width={648} height={900} />
+                    <img src={r.photo} alt={r.founder} width={648} height={733} />
                   ) : (
                     <>
                       <span className="dossier-photo">

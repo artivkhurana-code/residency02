@@ -248,7 +248,7 @@ function Card({
         {r.photo ? (
           <span className="polaroid-print">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={r.photo} alt={r.founder} width={648} height={900} loading="lazy" draggable={false} />
+            <img src={r.photo} alt={r.founder} width={648} height={733} loading="lazy" draggable={false} />
             <span className="polaroid-field">{r.field}</span>
           </span>
         ) : (
