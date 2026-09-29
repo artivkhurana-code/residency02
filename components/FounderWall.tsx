@@ -215,7 +215,7 @@ function Card({
   return (
     <motion.li
       layout
-      className="polaroid"
+      className={r.photo ? "polaroid has-photo" : "polaroid"}
       data-tone={tone}
       style={{ marginTop: nudge }}
       variants={cardVariants}
@@ -245,12 +245,20 @@ function Card({
         aria-haspopup="dialog"
         aria-label={`Read more about ${r.founder}, ${r.company}`}
       >
-        <span className="polaroid-photo">
-          <span className="polaroid-mono" aria-hidden="true">
-            {initialsOf(r.founder)}
+        {r.photo ? (
+          <span className="polaroid-print">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={r.photo} alt={r.founder} width={648} height={900} loading="lazy" draggable={false} />
+            <span className="polaroid-field">{r.field}</span>
           </span>
-          <span className="polaroid-field">{r.field}</span>
-        </span>
+        ) : (
+          <span className="polaroid-photo">
+            <span className="polaroid-mono" aria-hidden="true">
+              {initialsOf(r.founder)}
+            </span>
+            <span className="polaroid-field">{r.field}</span>
+          </span>
+        )}
         <span className="polaroid-name">{r.founder}</span>
         <span className="polaroid-co">{r.company}</span>
       </button>

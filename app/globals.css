@@ -566,6 +566,32 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .polaroid-name { font-size: 16px; }
 }
 
+/* residents still waiting on a photo: same frame and shape as the prints */
+.polaroid:not(.has-photo) { background: #f5f0eb; padding: 16px 16px 10px; }
+.polaroid:not(.has-photo) .polaroid-photo { aspect-ratio: 4 / 5; }
+
+/* residents with a finished polaroid: the print is the card, name and links sit on its frame */
+.polaroid.has-photo {
+  padding: 0 0 10px;
+  background: #f5f0eb; /* matches the print's own frame */
+}
+.polaroid-print {
+  position: relative;
+  display: block;
+  pointer-events: none;
+}
+.polaroid-print img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px 2px 0 0;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+.polaroid-print .polaroid-field { top: 8px; right: 8px; }
+.polaroid.has-photo .polaroid-name { margin-top: 2px; }
+.polaroid.has-photo .polaroid-opts { margin-inline: 10px; }
+
 /* empty */
 
 .pins-wrap { position: relative; }
@@ -683,6 +709,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 .dossier-hero .polaroid-field { font-size: 10px; top: 8px; right: 8px; }
+.dossier-hero.has-photo { width: min(300px, 80%); padding: 0; background: #f5f0eb; }
+.dossier-hero.has-photo img { display: block; width: 100%; height: auto; border-radius: 2px; }
 
 .dossier-caption {
   display: block;
@@ -844,7 +872,8 @@ a.link-row:hover { border-color: var(--ink); transform: translateX(4px); }
   /* polaroids: two even columns, bigger tap targets; the whole card opens "More" */
   .pins { gap: 36px 18px; }
   .pins > .polaroid { flex-basis: calc(50% - 9px); }
-  .polaroid { padding: 7px 7px 8px; margin-top: 0 !important; } /* keep the tilt, line the rows up */
+  .polaroid { padding: 7px 7px 8px; margin-top: 0 !important; }
+  .polaroid:not(.has-photo) { padding: 12px 12px 8px; } /* keep the tilt, line the rows up */
   .polaroid-mono { font-size: 2.6rem; }
   .polaroid-field { font-size: 8px; padding: 2px 5px; }
   .polaroid-opts { gap: 2px; padding-top: 4px; }
@@ -878,6 +907,7 @@ a.link-row:hover { border-color: var(--ink); transform: translateX(4px); }
   .dossier-top { touch-action: none; }
   .dossier-nav button { width: 42px; height: 42px; }
   .dossier-hero { width: 200px; }
+  .dossier-hero.has-photo { width: 230px; }
   .dossier-mono { font-size: 4.4rem; }
   .dossier-name { margin-top: 20px; }
   .tab { padding: 11px 10px; font-size: 13.5px; }

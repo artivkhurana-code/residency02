@@ -30,6 +30,8 @@ export type Resident = {
   x?: string;
   /** Company X handle, without the @. */
   companyX?: string;
+  /** The resident's finished polaroid (photo + caption), in public/residents. */
+  photo?: string;
 };
 
 export const SEASON = {
@@ -43,6 +45,7 @@ export const SEASON = {
 export const RESIDENTS: Resident[] = [
   {
     founder: "Prajit Sengupta",
+    photo: "/residents/prajit-sengupta.webp",
     company: "Sapiaverse",
     oneLiner: "A living digital twin of millions of simulated people.",
     about:
@@ -53,6 +56,7 @@ export const RESIDENTS: Resident[] = [
   },
   {
     founder: "Matt Stewart",
+    photo: "/residents/matt-stewart.webp",
     company: "Novi",
     oneLiner: "Phone focus for schools and families, with bypass detection.",
     about:
@@ -62,6 +66,7 @@ export const RESIDENTS: Resident[] = [
   },
   {
     founder: "Yuxin Zhu",
+    photo: "/residents/yuxin-zhu.webp",
     company: "Wattness",
     oneLiner: "Smarter bidding and dispatch for grid-scale batteries.",
     about:
@@ -72,6 +77,7 @@ export const RESIDENTS: Resident[] = [
   },
   {
     founder: "Taha Suleman",
+    photo: "/residents/taha-suleman.webp",
     company: "Flow",
     oneLiner: "The operating system for architecture studios.",
     about:
@@ -80,6 +86,7 @@ export const RESIDENTS: Resident[] = [
   },
   {
     founder: "Shreevardhan Shah",
+    photo: "/residents/shreevardhan-shah.webp",
     company: "SuperSchool",
     oneLiner: "The context layer that lets schools put AI to work.",
     about:
@@ -89,6 +96,7 @@ export const RESIDENTS: Resident[] = [
   },
   {
     founder: "Sri Kodali",
+    photo: "/residents/sri-kodali.webp",
     company: "Sovereign Intelligence",
     oneLiner: "Private AI research that never leaves your network.",
     about:
@@ -97,6 +105,7 @@ export const RESIDENTS: Resident[] = [
   },
   {
     founder: "Vaishnavi Mal",
+    photo: "/residents/vaishnavi-mal.webp",
     company: "AskMaya AI",
     oneLiner: "A voice-first phone assistant for older people.",
     about:
@@ -116,6 +125,7 @@ export const RESIDENTS: Resident[] = [
   },
   {
     founder: "Mohannad Najjar",
+    photo: "/residents/mohannad-najjar.webp",
     company: "SIDRA",
     oneLiner: "Autonomous drones that find wildfires, day or night.",
     about:
@@ -134,6 +144,7 @@ export const RESIDENTS: Resident[] = [
   },
   {
     founder: "Justin Kim",
+    photo: "/residents/justin-kim.webp",
     company: "HeyPCB",
     oneLiner: "Describe a circuit board in words, get the PCB and enclosure.",
     about:
@@ -145,6 +156,7 @@ export const RESIDENTS: Resident[] = [
   },
   {
     founder: "Kehinde Mccomb",
+    photo: "/residents/kehinde-mccomb.webp",
     company: "Pitch’em",
     oneLiner: "Creators pitch brands directly and track every deal.",
     about:
@@ -154,6 +166,7 @@ export const RESIDENTS: Resident[] = [
   },
   {
     founder: "Kenton Cooley",
+    photo: "/residents/kenton-cooley.webp",
     company: "SP3ND",
     oneLiner: "Buy almost anything online with stablecoins, agents included.",
     about:
@@ -165,6 +178,7 @@ export const RESIDENTS: Resident[] = [
   },
   {
     founder: "Saurav Tiwari",
+    photo: "/residents/saurav-tiwari.webp",
     company: "Aircraft Concept Studio",
     oneLiner: "One design environment for small aircraft makers.",
     about:
@@ -173,6 +187,7 @@ export const RESIDENTS: Resident[] = [
   },
   {
     founder: "Nisan Kotik",
+    photo: "/residents/nisan-kotik.webp",
     company: "Autonomous Soaring",
     oneLiner: "Control software that lets drones soar like birds.",
     about:
@@ -181,6 +196,7 @@ export const RESIDENTS: Resident[] = [
   },
   {
     founder: "Djason Gadiou",
+    photo: "/residents/djason-gadiou.webp",
     company: "Finagotchi",
     oneLiner: "A virtual pet that thrives when you save.",
     about:

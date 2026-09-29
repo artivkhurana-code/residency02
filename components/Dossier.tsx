@@ -140,20 +140,27 @@ export default function Dossier({
                 transition={{ duration: 0.35, ease: EASE }}
               >
                 <motion.div
-                  className="dossier-hero"
+                  className={r.photo ? "dossier-hero has-photo" : "dossier-hero"}
                   initial={{ rotate: -10, y: -20, opacity: 0 }}
                   animate={{ rotate: -2, y: 0, opacity: 1 }}
                   transition={{ type: "spring", stiffness: 220, damping: 16, delay: 0.05 }}
                 >
-                  <span className="dossier-photo">
-                    <span className="dossier-mono" aria-hidden="true">
-                      {initialsOf(r.founder)}
-                    </span>
-                    <span className="polaroid-field">{r.field}</span>
-                  </span>
-                  <span className="dossier-caption" aria-hidden="true">
-                    {r.founder.split(" ")[0]}
-                  </span>
+                  {r.photo ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={r.photo} alt={r.founder} width={648} height={900} />
+                  ) : (
+                    <>
+                      <span className="dossier-photo">
+                        <span className="dossier-mono" aria-hidden="true">
+                          {initialsOf(r.founder)}
+                        </span>
+                        <span className="polaroid-field">{r.field}</span>
+                      </span>
+                      <span className="dossier-caption" aria-hidden="true">
+                        {r.founder.split(" ")[0]}
+                      </span>
+                    </>
+                  )}
                 </motion.div>
 
                 <h2 className="dossier-name" id="dossier-name">
