@@ -11,6 +11,7 @@
 export type Field =
   | "AI"
   | "Hardware"
+  | "Aerospace"
   | "Fintech"
   | "Education"
   | "Health"
@@ -115,13 +116,15 @@ export const RESIDENTS: Resident[] = [
   },
   {
     founder: "Tair Asim",
-    company: "trce",
-    oneLiner: "See exactly which agent skills wrote your code.",
+    photo: "/residents/tair-asim.webp",
+    company: "Nito",
+    oneLiner: "Design reviewer for coding agents.",
     about:
-      "A verification layer for AI-written software. Shows engineering teams which agent skills and instructions ran, which versions were used, and what to share, fix or remove.",
+      "Nito learns your design standards, reviews what your coding agents build, and guides them to fix the drift before your users see it.",
     field: "AI",
-    site: "trce.run",
+    site: "usenito.com",
     x: "tair",
+    companyX: "_usenito",
   },
   {
     founder: "Mohannad Najjar",
@@ -183,7 +186,7 @@ export const RESIDENTS: Resident[] = [
     oneLiner: "One design environment for small aircraft makers.",
     about:
       "Takes mission requirements through geometry, aerodynamics, structures, propulsion and control in one place, for UAV makers who can't run the big aerospace toolchains.",
-    field: "Hardware",
+    field: "Aerospace",
   },
   {
     founder: "Nisan Kotik",
@@ -192,7 +195,7 @@ export const RESIDENTS: Resident[] = [
     oneLiner: "Control software that lets drones soar like birds.",
     about:
       "Bio-inspired control that helps fixed-wing drones sense and ride atmospheric energy, cutting battery swaps and extending missions. The long-term vision is a morphing-wing aircraft.",
-    field: "Hardware",
+    field: "Aerospace",
   },
   {
     founder: "Djason Gadiou",
@@ -211,6 +214,7 @@ export const RESIDENTS: Resident[] = [
 export const FIELDS: Field[] = [
   "AI",
   "Hardware",
+  "Aerospace",
   "Fintech",
   "Education",
   "Consumer",
